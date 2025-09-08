@@ -1,5 +1,6 @@
 env/
 .idea/
+__pycache__/
 disk.img
 partition_table.txt
 temp.py
