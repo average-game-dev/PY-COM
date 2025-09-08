@@ -7,7 +7,7 @@ The PY-COM OS framework (and included PY-DOS OS) are fully open source, meaning 
 ###### the official license is the CC-BY Creative Commons license (found in the LICENSE.txt or [on their website](https://creativecommons.org/publicdomain/zero/1.0/legalcode.txt))
 
 ## Usage
-With PY-COM we, the AOSP Group aim to make your experience and opinion matter. Head over to the GitHub repo and start a pull request, or shoot us an Email at `average_fps_not_a_second_acount@proton.me` 
+With PY-COM we, the AOSP Group aim to make your experience and opinion matter. Head over to the GitHub repo and start a pull request, or shoot us an Email at `average_fps_not_a_second_acount@proton.me`. Oh yeah, by the way, whenever someone says "OS" or OS in reference to PY-COM they mean the code that makes up the thing that you "boot".
 ### Developers
 Usually a developer will want to learn the codebase side of PY-COM.
 The files for that are in the `/docs/developers/` directory of the GitHub repo.
@@ -49,6 +49,7 @@ Here's a quick start up guide:
 > - [ ] Improve memory efficiency
 > - [ ] Improve disk speed
 > - [ ] Improve display responsiveness and speed
+> - [ ] Add an "OS manager" like pip to manage different OSs
 > 
 >  *(basic housekeeping stuff)*
 
