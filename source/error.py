@@ -23,11 +23,9 @@ class FuckYouError(Exception):
         super().__init__(f"{message} {args}")
 
 class WTFError(Exception):
-    def __init__(self, message: str = (
-        "How the fuck did this happen? One of three things occurred:\n"
+    def __init__(self, *args):
+        super().__init__("How the fuck did this happen? One of three things occurred:\n"
         "1: A work of god has fucked this up.\n"
         "2: A cosmic ray has flipped a bit in your RAM causing the program to crash\n"
         "3: The Pharaoh's Curse has struck\n\n"
-        "It is up to you to figure out which one happened."
-    ), *args):
-        super().__init__(f"{message} {args}")
+        f"It is up to you to figure out which one happened. {args}")

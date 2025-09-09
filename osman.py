@@ -1,2 +1,1 @@
-from sys import argv
-
+# idk i might work on this later, not now though
