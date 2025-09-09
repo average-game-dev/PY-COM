@@ -1,7 +1,7 @@
 # PY-COM, The stupid Python "OS"
 ###### *not really an OS*
 
-**Welcome** to the PY-COM documentation, whether you're a developer wanting to expand on the framework and make your own OS, or a user wanting to try the OS created by AOSP Group PY-COM is the stupid OS for *you*.
+**Welcome** to the PY-COM documentation, whether you're a developer wanting to expand on the framework and make your own OS, or a user wanting to try the OS created by AOSP Group PY-COM is the stupid OS framework for *you*.
 
 The PY-COM OS framework (and included PY-DOS OS) are fully open source, meaning **you** can share, modify, and redistribute as much as you want. (*but you need to credit me*)
 ###### the official license is the CC-BY Creative Commons license (found in the `/LICENSE.txt` or [on their website](https://creativecommons.org/publicdomain/zero/1.0/legalcode.txt))
