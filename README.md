@@ -1,10 +1,18 @@
+###### *An Average OS Productions (AOSP) project*
+```
+  ____            S T U P I D 
+ / /\ \           T H R E A D 
+/ /  \ \          S Y S T E M 
+\ \ _ \ \         W I T H I N 
+ \_(_) \_\        P Y T H O N
+```
 # PY-COM, The stupid Python "OS"
 ###### *not really an OS*
 
 **Welcome** to the PY-COM documentation, whether you're a developer wanting to expand on the framework and make your own OS, or a user wanting to try the OS created by AOSP Group PY-COM is the stupid OS framework for *you*.
 
 The PY-COM OS framework (and included PY-DOS OS) are fully open source, meaning **you** can share, modify, and redistribute as much as you want. (*but you need to credit me*)
-###### the official license is the CC-BY Creative Commons license (found in the `/LICENSE.txt` or [on their website](https://creativecommons.org/publicdomain/zero/1.0/legalcode.txt))
+###### the official license is the CC-BY Creative Commons license (found in the `/LICENSE.txt` or [on their website](https://creativecommons.org/licenses/by/4.0/legalcode.txt))
 
 ## Usage
 With PY-COM we, the AOSP Group aim to make your experience and opinion matter. Head over to the GitHub repo and start a pull request, or shoot us an Email at `average_fps_not_a_second_acount@proton.me`. Oh yeah, by the way, whenever someone says "OS" or OS in reference to PY-COM they mean the code that makes up the thing that you "boot".
@@ -54,4 +62,4 @@ Here's a quick start up guide:
 >  *(basic housekeeping stuff)*
 
 ## Notes
-Some of the "kernel" python scripts might have Jupyter Notebooks with examples and other useful info along with the Markdown file.
+Some of the "kernel" python scripts *might* have Jupyter Notebooks with examples and other useful info along with the Markdown file.

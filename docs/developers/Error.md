@@ -69,7 +69,7 @@ else:
     raise error.FuckYouError("<error message>", <any extra arguments>)
 ```
 ### WTFError
-This error is used as "specialty" error, it doesn't really have a definition or usecase but rather is used whenever you feel like it. This error is special in the fact that you can not give this error an error message, only arguments. 
+This error is used as "specialty" error, it doesn't really have a definition or use case but rather is used whenever you feel like it. This error is special in the fact that you can not give this error an error message because you use this error only in scenarios where you couldn't have an explanation. 
 It's usage in code should be something like:  
 ```python
 from source import error
@@ -79,3 +79,9 @@ if condition_that_really_should_be_true:
 else:
     raise error.WTFError(<any arguments>)
 ```
+## Custom Errors
+You can raise any error you want, the kernel will not try to catch or do anything to it.
+## ***Error Guidelines***
+>- Make error messages clear.
+>- If you have an error code associated with an error message or its args please fulfill your duty and properly document said error code.
+>- If possible catch and recover from any errors

@@ -1,7 +1,7 @@
 import keyboard
 from error import FuckYouError
 
-input_map = {
+name_to_code = {
     "esc": 1,
     "1": 2,
     "2": 3,
@@ -110,7 +110,7 @@ input_map = {
     "page up": 73,
     "page down": 81,
 }
-reverse_input_map = {
+code_to_name = {
     1: "esc",
     2: "1",
     3: "2",
@@ -209,19 +209,18 @@ reverse_input_map = {
     110: "f23",
     118: "f24",
 }
-version: str = ""
 
 class v1:
     def __init__(self):
-        keyboard.on_press(self.on_key)
+        keyboard.on_press(self.__on_key)
         self.key_dict = {}
-    def on_key(self, event):
+    def __on_key(self, event):
         key = None
         if hasattr(event, 'scan_code'):
             key = event.scan_code
         elif hasattr(event, 'name'):
             # fallback to name-to-code map
-            key = input_map.get(event.name)
+            key = name_to_code.get(event.name)
         else:
             return  # can’t handle this event
 
@@ -230,23 +229,23 @@ class v1:
 
     def assign_hook(self, key, func):
         if type(key) == int:
-            if key in reverse_input_map:
+            if key in code_to_name:
                 self.key_dict[key] = func
         elif type(key) == str:
-            if key in input_map:
-                self.key_dict[input_map[key]] = func
+            if key in name_to_code:
+                self.key_dict[name_to_code[key]] = func
 class v2:
     def __init__(self):
         self.key_dict = {}
     def assign_hook(self, key, func):
         if type(key) == int:
-            if key in reverse_input_map:
+            if key in code_to_name:
                 self.key_dict[key] = func
         elif type(key) == str:
-            if key in input_map:
-                self.key_dict[input_map[key]] = func
+            if key in name_to_code:
+                self.key_dict[name_to_code[key]] = func
     def check_input(self, key):
-        if type(key) == str: key = input_map[key]
+        if type(key) == str: key = name_to_code[key]
         if keyboard.is_pressed(key):
             self.key_dict[key]()
     def check_inputs(self):
@@ -259,21 +258,22 @@ class v3:
 
     def assign_hook(self, key, func):
         if type(key) == int:
-            if key in reverse_input_map:
+            if key in code_to_name:
                 self.key_dict[key] = func
                 self.prev_state[key] = False
         elif type(key) == str:
-            if key in input_map:
-                key_code = input_map[key]
+            if key in name_to_code:
+                key_code = name_to_code[key]
                 self.key_dict[key_code] = func
                 self.prev_state[key_code] = False
 
     def assign_faulty_hook(self, key):
+        if type(key) == str: key = name_to_code[key]
         self.key_dict[key] = lambda: None
 
     def check_input(self, key):
         if type(key) == str:
-            key = input_map[key]
+            key = name_to_code[key]
         currently_pressed = keyboard.is_pressed(key)
         if currently_pressed and not self.prev_state.get(key, False):
             # Just pressed now

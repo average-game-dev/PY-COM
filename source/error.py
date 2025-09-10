@@ -1,6 +1,7 @@
 """
-The main error handling script.
+The main error handling script. The documentation is stored in `/docs/Error.md`
 """
+# <.\
 
 class DisplayError(Exception):
     def __init__(self, message: str = "A general display error has occurred.", *args):

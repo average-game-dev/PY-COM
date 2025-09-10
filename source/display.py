@@ -10,7 +10,7 @@ def write_pixels_numba(vram, array, pos_y, pos_x):
             vram[pos_y + y, pos_x + x, 0] = array[y, x, 0]
             vram[pos_y + y, pos_x + x, 1] = array[y, x, 1]
             vram[pos_y + y, pos_x + x, 2] = array[y, x, 2]
-    return w
+    return pos_x + w
 
 class VRAM:
     def __init__(self, size_x, size_y, scale_x=1, scale_y=1):
