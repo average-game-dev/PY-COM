@@ -1,3 +1,11 @@
+###### *An Average OS Productions (AOSP) project*
+```
+  ____            S T U P I D 
+ / /\ \           T H R E A D 
+/ /  \ \          S Y S T E M 
+\ \ _ \ \         W I T H I N 
+ \_(_) \_\        P Y T H O N
+```
 # Errors in PY-COM
 This Markdown file will go over the `/source/error.py` file and usage.
 
